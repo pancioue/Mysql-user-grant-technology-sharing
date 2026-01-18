@@ -55,9 +55,6 @@ GRANT SELECT ON Database.* TO `user_name`@'localhost';
 GRANT SELECT ON *.* TO `user_name`@'localhost';
 ```
 
-https://dev.mysql.com/doc/refman/8.0/en/grant.html
-
-
 ## GRANT OPTION
 ```SQL
 GRANT ALL PRIVILEGES ON *.* TO `user_name`@`ip_address` WITH GRANT OPTION;
@@ -77,10 +74,6 @@ grant select,drop on drug.* to patrick with grant option
   ```
 * grant option 指定的重點是作用域，前面的權限並不重要
 * 要授予轉移權限時，必須自己擁有grant option，但不一定需要有操作權限
-  ```sql
-  GRANT GRANT OPTION ON *.* TO USER
-  ```
-  或者
   ```
   GRANT USAGE ON *.* TO USER WITH GRANT OPTION
   ```
