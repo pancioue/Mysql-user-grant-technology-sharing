@@ -72,6 +72,12 @@ grant select,drop on drug.* to patrick with grant option
   ```sql
   GRANT select ON *.* TO USER
   ```
+* grant option時重點在前面的作用域，例如
+  ```
+  GRANT SELECT ON db.* TO 'patrick'@'localhost' WITH GRANT OPTION; 
+  GRANT UPDATE ON db.* TO 'patrick'@'localhost';
+  ```
+  這樣 patrick 也可 grant update 權限給別人
 * 要授予轉移權限時，必須自己擁有grant option，但不一定需要有操作權限
   ```
   GRANT USAGE ON *.* TO USER WITH GRANT OPTION
