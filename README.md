@@ -72,7 +72,6 @@ grant select,drop on drug.* to patrick with grant option
   ```sql
   GRANT select ON *.* TO USER
   ```
-* grant option 指定的重點是作用域，前面的權限並不重要
 * 要授予轉移權限時，必須自己擁有grant option，但不一定需要有操作權限
   ```
   GRANT USAGE ON *.* TO USER WITH GRANT OPTION
